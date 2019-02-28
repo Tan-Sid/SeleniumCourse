@@ -36,25 +36,32 @@ public class MenuClick extends TestBase {
         driver.findElement(By.name("login")).click();
         wait.until(titleIs("My Store"));
 
-        List<WebElement> items = driver.findElements(By.cssSelector("#app- a"));
-
-        int itemsCount = items.size();
-        System.out.println(itemsCount);
+//        List<WebElement> items = driver.findElements(By.cssSelector("#app- a"));
+//
+//        int itemsCount = items.size();
+//        System.out.println(itemsCount);
 //        System.out.println(items);
 //        System.out.println(items.get(1));
-            for (int i = 0; i <= itemsCount-1; i++){
-
-//                List<WebElement> items = driver.findElements(By.cssSelector("#app- > a"));
-//                int itemsCount = items.size();
-                WebElement singleItem = items.get(i);
-                System.out.println(singleItem);
-                singleItem.click();
-////                testBase = testBase.isElementPresent(By.tagName("h1"));
+//            for (int i = 0; i <= itemsCount-1; i++){
 //
-            }
+////                List<WebElement> items = driver.findElements(By.cssSelector("#app- > a"));
+////                int itemsCount = items.size();
+//                WebElement singleItem = items.get(i);
+//                System.out.println(singleItem);
+//                singleItem.click();
+//////                testBase = testBase.isElementPresent(By.tagName("h1"));
+//
+//            }
 //        foreach (var item )
 
-
+        int i = 0;
+            while (true) {
+                List<WebElement> items = driver.findElements(By.cssSelector("#app- a"));
+                if (i >= items.size()) {
+                    break;
+                }
+                items.get(i++).click();
+            }
 
 
 
