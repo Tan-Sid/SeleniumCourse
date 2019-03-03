@@ -14,10 +14,7 @@ public class MenuClick extends TestBase {
     @Test
     public void menuClick() {
 
-        driver.get("http://localhost/litecart/admin/");
-        driver.findElement(By.name("username")).sendKeys("admin");
-        driver.findElement(By.name("password")).sendKeys("admin");
-        driver.findElement(By.name("login")).click();
+        adminLogin();
 
         List<WebElement> menu = driver.findElements(By.cssSelector("li#app-"));
         for (int i = 0; i < menu.size(); i++) {
