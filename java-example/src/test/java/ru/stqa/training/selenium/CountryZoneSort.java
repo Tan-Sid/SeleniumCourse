@@ -71,5 +71,4 @@ public class CountryZoneSort extends TestBase {
         Collections.sort(sortedList);
         Assert.assertEquals(sortedList, list);
     }
-
 }
