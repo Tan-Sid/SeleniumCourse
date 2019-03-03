@@ -26,12 +26,12 @@ public class TestBase {
     driver = null;
   }
 
-  public TestBase isElementPresent(By by) {
+  public boolean isElementPresent(By locator) {
     try {
-      driver.findElement(By.tagName("h1"));
+      driver.findElement(locator);
+      return true;
     } catch (NoSuchElementException ex) {
-
+      return false;
     }
-      return this;
   }
 }
