@@ -33,12 +33,7 @@ public class TestBase {
     driver.findElement(By.name("login")).click();
   }
 
-  public boolean isElementPresent(By locator) {
-    try {
-      driver.findElement(locator);
-      return true;
-    } catch (NoSuchElementException ex) {
-      return false;
-    }
+  public  boolean isElementPresent(WebDriver driver, By locator) {
+    return driver.findElements(locator).size() > 0;
   }
 }
